@@ -5,6 +5,7 @@ import torch
 import polygnn
 import polygnn_trainer as pt
 from pathlib import Path
+from typing import Tuple
 
 
 all_properties = {
@@ -57,7 +58,7 @@ all_properties = {
 
 
 currentdir = Path(__file__).resolve().parent
-ROOT = currentdir / ".." / "trained_models" # path to "trained_models" directory in PolyGNN repository
+ROOT = currentdir / ".." /".."/ "trained_models" # path to "trained_models" directory in PolyGNN repository
 
 # For convenience, let's define a function that makes predictions.
 def _make_prediction_routine(data, dir_name):
@@ -133,7 +134,7 @@ def properties_from_SMILES(
         "thermodynamic_and_physical",
         "solubility_and_permeability",
     ],
-) -> pd.DataFrame:
+) -> Tuple[pd.DataFrame, pd.DataFrame]:
     """Compute properties for a list of SMILES strings using Rishi Gurnani's PolyGNN models.
 
     Args:
@@ -141,9 +142,11 @@ def properties_from_SMILES(
         models (List[str], optional): list of models (classes of material properties) to apply. Options: "mechanical", "thermal", "electronic", "optical_and_dielectric", "thermodynamic_and_physical", "solubility_and_permeability". Defaults to all.
 
     Returns:
-        pd.DataFrame: _description_
+        pd.DataFrame: dataframe of computed properties.
+        pd.DataFrame: dataframe of standard deviations of computed properties.
     """
     df = None
+    df_stds = None
     for model_name in models:
         inputdf = pd.DataFrame(
             [
@@ -158,13 +161,15 @@ def properties_from_SMILES(
         inputdf["mean"], inputdf["std"] = _make_prediction_routine(inputdf, model_name)
         means = inputdf.pivot(index="smiles_string", columns="prop", values="mean")
         stds = inputdf.pivot(index="smiles_string", columns="prop", values="std")
-        df_ = (
-            pd.merge(left=means, right=stds, on="smiles_string", suffixes=("", "_std"))
-            .rename_axis(columns=None)
-            .reset_index()
-        )
+        # df_ = (
+        #     pd.merge(left=means, right=stds, on="smiles_string", suffixes=("", "_std"))
+        #     .rename_axis(columns=None)
+        #     .reset_index()
+        # )
         if df is None:
-            df = df_
+            df = means
+            df_stds = stds
         else:
-            df = pd.merge(df, df_, on="smiles_string")
-    return df
+            df = pd.merge(df, means, on="smiles_string")
+            df_stds = pd.merge(df_stds, stds, on="smiles_string")
+    return df, df_stds

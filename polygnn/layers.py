@@ -1,7 +1,7 @@
 import torch.nn as nn
 import torch
 import torch.nn.functional as F
-from torch_scatter import scatter_sum, scatter_mean
+from .torch_scatter_patch import scatter_sum, scatter_mean
 import random
 import numpy as np
 import polygnn_trainer as pt

@@ -10,3 +10,4 @@ from . import (
     trimer,
     infer,
 )
+from polygnn.interface import properties_from_SMILES, all_properties

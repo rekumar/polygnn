@@ -1,6 +1,14 @@
+from pathlib import Path
 from fastapi import FastAPI
 from .datamodels import InferenceInput
-from .backend import properties_from_SMILES
+from .backend import properties_from_SMILES, all_properties
+import json
+
+thisdir = Path(__file__).parent
+
+with open(thisdir / "properties.json", "r") as f:
+    property_details = json.load(f)
+
 
 app = FastAPI(
     title="PolyGNN API",
@@ -33,6 +41,20 @@ async def predict(input_data: InferenceInput):
         "stds": df_std.to_json()
     }
 
-# Step 7: Run the FastAPI app using Uvicorn
-# Run the following command in your terminal:
-# uvicorn api:app --reload
+
+@app.get("/availableProperties", summary="Get a list of available property types.", description="Get a list of available property types that can be predicted using the PolyGNN models. The keys of the returned dictionary are the individual PolyGNN models trained on that class of properties. One or more of these property types can be used as input to the /predict endpoint; for each type, the list of corresponding properties will be predicted.")
+async def available_properties():
+    """Get a list of available property types.
+
+    Returns:
+        List: List of available property types.
+    """
+    detailed = {
+        property_class: {
+            prop: property_details[prop] 
+            for prop in props}
+        for property_class, props
+        in all_properties.items()
+        }
+    
+    return detailed

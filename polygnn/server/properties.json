@@ -1,0 +1,187 @@
+{
+    "exp_solubility__MPa**0.5": {
+        "explanation": "The Hildebrand solubility parameter in units of MPa^0.5. The Hildebrand solubility parameter is a measure of the polarity of a polymer. It is the square root of the cohesive energy density.",
+        "prettyName": "Solubility",
+        "units": "MPa^0.5"
+    },
+    "exp_perm_CH4__Barrer": {
+        "explanation": "The permeability of CH4 in units of log10(Barrer). The Barrer is a unit of gas permeability.",
+        "prettyName": "Permeability of CH4",
+        "units": "log10(Barrer)"
+    },
+    "exp_perm_CO2__Barrer": {
+        "explanation": "The permeability of CO2 in units of log10(Barrer). The Barrer is a unit of gas permeability.",
+        "prettyName": "Permeability of CO2",
+        "units": "log10(Barrer)"
+    },
+    "exp_perm_He__Barrer": {
+        "explanation": "The permeability of He in units of log10(Barrer). The Barrer is a unit of gas permeability.",
+        "prettyName": "Permeability of He",
+        "units": "log10(Barrer)"
+    },
+    "exp_perm_N2__Barrer": {
+        "explanation": "The permeability of N2 in units of log10(Barrer). The Barrer is a unit of gas permeability.",
+        "prettyName": "Permeability of N2",
+        "units": "log10(Barrer)"
+    },
+    "exp_perm_O2__Barrer": {
+        "explanation": "The permeability of O2 in units of log10(Barrer). The Barrer is a unit of gas permeability.",
+        "prettyName": "Permeability of O2",
+        "units": "log10(Barrer)"
+    },
+    "exp_perm_H2__Barrer": {
+        "explanation": "The permeability of H2 in units of log10(Barrer). The Barrer is a unit of gas permeability.",
+        "prettyName": "Permeability of H2",
+        "units": "log10(Barrer)"
+    },
+    "exp_Tm__K": {
+        "explanation": "The melting temperature in units of K",
+        "prettyName": "Melting Temperature",
+        "units": "K"
+    },
+    "exp_Tg__K": {
+        "explanation": "The glass-transition temperature in units of K. The glass-transition temperature is the temperature above which a material changes from a hard, brittle state to a rubbery, viscous state.",
+        "prettyName": "Glass-Transition Temperature",
+        "units": "K"
+    },
+    "exp_thermal_decomposition_temperature__K": {
+        "explanation": "The thermal decomposition temperature in units of K",
+        "prettyName": "Thermal Decomposition Temperature",
+        "units": "K"
+    },
+    "exp_thermal_conductivity__W_per_m_per_K": {
+        "explanation": "The thermal conductivity in units of watts per meter-kelvin. The thermal conductivity is a measure of the ability of a material to conduct heat. Higher values indicate that a material is a better conductor of heat than a material with a lower thermal conductivity.",
+        "prettyName": "Thermal Conductivity",
+        "units": "W/mK"
+    },
+    "exp_Cp__J_per_gK": {
+        "explanation": "The specific heat capacity in units of joules per gram-Kelvin. The specific heat capacity is the amount of heat required to raise the temperature of a unit mass of a substance by one degree. Lower values indicate that a material heats up more quickly than a material with a higher specific heat capacity.",
+        "prettyName": "Specific Heat Capacity",
+        "units": "J/gK"
+    },
+    "DFT_Eatomization__eV_per_atom": {
+        "explanation": "The atomization energy in units of eV/atom. The atomization energy is the energy required to separate all the atoms in a molecule from each other. It is a measure of the stability of a molecule.",
+        "prettyName": "Atomization Energy",
+        "units": "eV/atom"
+    },
+    "exp_limiting_oxygen_index__percentage": {
+        "explanation": "The limiting oxygen percentage. The limiting oxygen index is a measure of the flammability of a polymer. It is the minimum concentration of oxygen in an oxygen/nitrogen mixture that will support combustion of a polymer.",
+        "prettyName": "Limiting Oxygen Index",
+        "units": "%"
+    },
+    "exp_crystallinity_LF": {
+        "explanation": "The crystallization tendency, trained on low fidelity data. The crystallization tendency is a measure of the tendency of a polymer to crystallize.",
+        "prettyName": "Crystallinity (Low Fidelity)",
+        "units": "%"
+    },
+    "exp_crystallinity_HF": {
+        "explanation": "The crystallization tendency, trained on high fidelity data. The crystallization tendency is a measure of the tendency of a polymer to crystallize.",
+        "prettyName": "Crystallinity (High Fidelity)",
+        "units": "%"
+    },
+    "exp_rho__g_per_cc": {
+        "explanation": "The density in units of g/cc",
+        "prettyName": "Density",
+        "units": "g/cc"
+    },
+    "exp_free_fractional_volume": {
+        "explanation": "The fractional free volume. The free volume is the volume of a polymer that is not occupied by polymer chains. It is a measure of the free space in a polymer.",
+        "prettyName": "Free Fractional Volume",
+        "units": "%"
+    },
+    "DFT_bandgap_LF__eV": {
+        "explanation": "The band gap in units of eV. 'LF' stands for low fidelity. Meaning the DFT calculations were done on polymer chain structures. The band gap is the energy difference between the highest occupied molecular orbital and the lowest unoccupied molecular orbital.",
+        "prettyName": "Band Gap (Low Fidelity)",
+        "units": "eV"
+    },
+    "DFT_bandgap_HF__eV": {
+        "explanation": "The band gap in units of eV. 'HF' stands for high fidelity. Meaning the DFT calculations were done on polymer crystal structures. The band gap is the energy difference between the highest occupied molecular orbital and the lowest unoccupied molecular orbital. ",
+        "prettyName": "Band Gap (High Fidelity)",
+        "units": "eV"
+    },
+    "DFT_EA__eV": {
+        "explanation": "The electron affinity in units of eV. The electron affinity is the energy released when an electron is added to a neutral atom or molecule to form a negative ion.",
+        "prettyName": "Electron Affinity",
+        "units": "eV"
+    },
+    "DFT_Eionization__eV": {
+        "explanation": "The ionization energy in units of eV. The ionization energy is the energy required to remove an electron from a neutral atom or molecule to form a positive ion.",
+        "prettyName": "Ionization Energy",
+        "units": "eV"
+    },
+    "exp_refractive_index": {
+        "explanation": "The refractive index as predicted by a model trained on experimental data. The refractive index is a measure of how much light is bent when it enters a material. It is a measure of the optical density of a material.",
+        "prettyName": "Refractive Index",
+        "units": ""
+    },
+    "DFT_refractive_index": {
+        "explanation": "The refractive index as predicted by a model trained on DFT data. The refractive index is a measure of how much light is bent when it enters a material. It is a measure of the optical density of a material.",
+        "prettyName": "Refractive Index",
+        "units": ""
+    },
+    "DFT_dielectric_total": {
+        "explanation": "The total dielectric constant. The dielectric constant is a measure of the ability of a material to store electrical energy in an electric field. It is a measure of the polarizability of a material.",
+        "prettyName": "Total Dielectric Constant",
+        "units": ""
+    },
+    "exp_dielectric_constant_1.78": {
+        "explanation": "The dielectric constant at 10^(1.78) Hz. The dielectric constant is a measure of the ability of a material to store electrical energy in an electric field. It is a measure of the polarizability of a material.",
+        "prettyName": "Dielectric Constant (10^1.78 Hz)",
+        "units": ""
+    },
+    "exp_dielectric_constant_2.0": {
+        "explanation": "The dielectric constant at 10^(2.0) Hz. The dielectric constant is a measure of the ability of a material to store electrical energy in an electric field. It is a measure of the polarizability of a material.",
+        "prettyName": "Dielectric Constant (10^2.0 Hz)",
+        "units": ""
+    },
+    "exp_dielectric_constant_3.0": {
+        "explanation": "The dielectric constant at 10^(3.0) Hz. The dielectric constant is a measure of the ability of a material to store electrical energy in an electric field. It is a measure of the polarizability of a material.",
+        "prettyName": "Dielectric Constant (10^3.0 Hz)",
+        "units": ""
+    },
+    "exp_dielectric_constant_4.0": {
+        "explanation": "The dielectric constant at 10^(4.0) Hz. The dielectric constant is a measure of the ability of a material to store electrical energy in an electric field. It is a measure of the polarizability of a material.",
+        "prettyName": "Dielectric Constant (10^4.0 Hz)",
+        "units": ""
+    },
+    "exp_dielectric_constant_5.0": {
+        "explanation": "The dielectric constant at 10^(5.0) Hz. The dielectric constant is a measure of the ability of a material to store electrical energy in an electric field. It is a measure of the polarizability of a material.",
+        "prettyName": "Dielectric Constant (10^5.0 Hz)",
+        "units": ""
+    },
+    "exp_dielectric_constant_6.0": {
+        "explanation": "The dielectric constant at 10^(6.0) Hz. The dielectric constant is a measure of the ability of a material to store electrical energy in an electric field. It is a measure of the polarizability of a material.",
+        "prettyName": "Dielectric Constant (10^6.0 Hz)",
+        "units": ""
+    },
+    "exp_dielectric_constant_7.0": {
+        "explanation": "The dielectric constant at 10^(7.0) Hz. The dielectric constant is a measure of the ability of a material to store electrical energy in an electric field. It is a measure of the polarizability of a material.",
+        "prettyName": "Dielectric Constant (10^7.0 Hz)",
+        "units": ""
+    },
+    "exp_dielectric_constant_9.0": {
+        "explanation": "The dielectric constant at 10^(9.0) Hz. The dielectric constant is a measure of the ability of a material to store electrical energy in an electric field. It is a measure of the polarizability of a material.",
+        "prettyName": "Dielectric Constant (10^9.0 Hz)",
+        "units": ""
+    },
+    "exp_dielectric_constant_15.0": {
+        "explanation": "The dielectric constant at 10^(15.0) Hz. The dielectric constant is a measure of the ability of a material to store electrical energy in an electric field. It is a measure of the polarizability of a material.",
+        "prettyName": "Dielectric Constant (10^15.0 Hz)",
+        "units": ""
+    },
+    "exp_TS__MPa": {
+        "explanation": "The tensile stength in units of MPa. The tensile strength is the maximum stress that a material can withstand while being stretched or pulled before necking, which is when the material begins to thin and eventually break.",
+        "prettyName": "Tensile Strength",
+        "units": "MPa"
+    },
+    "exp_YM__GPa": {
+        "explanation": "The Young's modulus in units of GPa. The Young's modulus is a measure of the stiffness of a material. It is the ratio of the stress applied to a material to the strain that results in the material.",
+        "prettyName": "Young's Modulus",
+        "units": "GPa"
+    },
+    "degree_of_fluorination": {
+        "explanation": "The degree of fluorination of a polymer. The degree of fluorination is the fraction of the atoms in a polymer that are fluorine atoms.",
+        "prettyName": "Degree of Fluorination",
+        "units": ""
+    }
+}
